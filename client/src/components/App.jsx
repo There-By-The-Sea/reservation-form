@@ -1,4 +1,6 @@
 import React from 'react';
+import CalendarDateSelector from './CalendarDateSelector.jsx';
+import ReservationForm from './ReservationForm.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +12,13 @@ class App extends React.Component {
   }
 
   render() {
-    return <h2>Reservation Form</h2>
+    return (
+      <div>
+        <h1>APP</h1>
+        <CalendarDateSelector />
+        <ReservationForm />
+      </div>
+    )
   }
 }
 
