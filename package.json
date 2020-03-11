@@ -6,7 +6,9 @@
   "scripts": {
     "webpack": "webpack -d --watch",
     "schema": "mysql -u root < schema.sql",
-    "server": "nodemon server/index.js"
+    "server": "nodemon server/index.js",
+    "populateDB": "node db/dummyData/dummySet100.js"
+    
   },
   "repository": {
     "type": "git",
