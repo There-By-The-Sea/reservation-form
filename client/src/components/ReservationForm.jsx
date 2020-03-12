@@ -12,13 +12,38 @@ class ReservationForm extends React.Component {
     this.state = {
       property: 'PropertyObject_ GOES HERE'
     }
+    this.setStringsToState = this.setStringsToState.bind(this);
+  }
+
+  componentDidUpdate() {
+    console.log(this.state);
+  }
+
+  createStringDate(year, month, day) {
+    var stringDate = '';
+    stringDate += year.toString();
+    stringDate += '-' + month.toString() + '-';
+    stringDate += day.toString()
+    return stringDate
+  }
+
+  setStringsToState(startDate, endDate) {
+    var startDateString = this.createStringDate(startDate.year(), startDate.month() + 1, startDate.date());
+    var endDateString = this.createStringDate(endDate.year(), endDate.month() + 1, endDate.date());
+    if(startDateString !== this.state.startDateString || endDateString !== this.state.endDateString) {
+      this.setState({
+        startDateString,
+        endDateString
+      })
+    }
+  
   }
 
   render() {
     return (
       <div className='ReservationForm'>
         <ReservationHeader />
-        <ReservationDateSelector />
+        <ReservationDateSelector setStringsToState={this.setStringsToState} />
         <GuestsSelector />
         <ReserveButton />
       </div>
