@@ -1,3 +1,4 @@
+import 'react-dates/lib/css/_datepicker.css';
 var path = require('path');
 var SRC_DIR = path.join(__dirname, '/client/src');
 var DIST_DIR = path.join(__dirname, '/client/dist');
@@ -16,6 +17,11 @@ module.exports = {
         options: {
           'presets': ['@babel/preset-env', '@babel/preset-react']
         }
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
+        use: ['style-loader', 'css-loader'],
       }
     ]
   }

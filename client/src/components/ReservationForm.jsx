@@ -16,16 +16,16 @@ class ReservationForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>ReservationForm</h2>
+      <div className='ReservationForm'>
         <ReservationHeader />
         <ReservationDateSelector />
-        <PaymentCalculator />
         <GuestsSelector />
         <ReserveButton />
       </div>
     )
   }
 }
+
+//ONLY DISPLAY PAYMENT CALCULATOR IF CHECK IN AND CHECKOUT NIGHTS HAVE BEEN SELECTED
 
 export default ReservationForm
