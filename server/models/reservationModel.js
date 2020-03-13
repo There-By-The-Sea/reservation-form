@@ -26,7 +26,21 @@ const selectReservations = (propertyId) => {
   })
 }
 
+const insertReservation = (property_id, checkin, checkout) => {
+  return new Promise((resolve, reject) => {
+    var queryString = `INSERT INTO reservations (property_id, checkin, checkout) VALUES (${property_id}, '${checkin}', '${checkout}');`;
+    db.query(queryString, (err, results) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(results.insertId)
+      }
+    });
+  });
+}
+
 module.exports = {
   selectProperty,
-  selectReservations
+  selectReservations,
+  insertReservation
 }

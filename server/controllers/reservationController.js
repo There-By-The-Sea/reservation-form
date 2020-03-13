@@ -1,9 +1,23 @@
 const reservationModel = require('../models/reservationModel.js');
 
 
-// postReservation = (req, res) => {
-
-// }
+const postReservation = (req, res) => {
+var reservationData = req.body;
+reservationModel.insertReservation(reservationData.property_id, reservationData.checkin, reservationData.checkout)
+  .then(reservationId => {
+    reservationModel.selectReservations(reservationData.property_id)
+      .then(reservations => {
+        console.log(reservations);
+        res.status(201).json(reservations);
+      })
+  })
+  .catch(err => {
+    res.status(400).json({
+      message: 'Failed to insert reservation info into database',
+      err: err
+    })
+  })
+}
 
 const getProperty = (req, res) => {
   var propertyId = req.query.propertyId;
@@ -24,6 +38,7 @@ const getProperty = (req, res) => {
 }
 
 module.exports = {
-  getProperty
+  getProperty,
+  postReservation
 }
 

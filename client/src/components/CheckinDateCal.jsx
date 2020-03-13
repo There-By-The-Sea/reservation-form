@@ -50,7 +50,7 @@ class CheckinDateCal extends React.Component {
 
   //this function outputs an array of all the blocked dates in 
   dateRangeFinder() {
-    var reservations = this.props.reservations;
+    var reservations = this.props.reservations.sort((b, a) => new Date(b.checkin) - new Date(a.checkin));
       if (reservations !== undefined) {
         var blockedDates = []; 
         reservations.forEach(reservation => {
@@ -70,7 +70,6 @@ class CheckinDateCal extends React.Component {
   }
 
   render() {
-    console.log('reservations: ', this.props.reservations)
     return (
       <div>
         <DateRangePicker
