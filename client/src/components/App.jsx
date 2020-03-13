@@ -9,8 +9,28 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      reservations: 'RESERVATION OBJECT'
+      propertyInfo: {}
     }
+    this.getProperty.bind(this);
+  }
+
+  componentDidMount() {
+    this.getProperty(71)
+  }
+
+  getProperty(propertyId) {
+    fetch(`http://localhost:3000/reservations/plan?propertyId=${propertyId}`)
+      .then(response => {
+        return response.json();
+      })
+      .then(propertyData => {
+        this.setState({
+          propertyInfo: propertyData.property[0]
+        })
+      })
+      .catch(err => {
+        console.log(err);
+      })
   }
 
   render() {
@@ -18,7 +38,7 @@ class App extends React.Component {
       <div>
         <h1>APP</h1>
         <CalendarDateSelector />
-        <ReservationForm />
+        <ReservationForm property={this.state.propertyInfo}/>
       </div>
     )
   }

@@ -4,12 +4,12 @@ const ReservationHeader = (props) => {
   return (
     <div className='ReservationHeader'>
       <div>
-        <span id='price'>$470 </span>
+        <span id='price'>${props.price} </span>
         <span id='text'>per night</span>
       </div>
       <div>
         <span id='star'>★</span>
-        <span id='text'>4.89 </span>
+        <span id='text'>{props.rating} </span>
         <span id='reviews-amount'>{'(19 reviews)'}</span>
       </div>
     </div>

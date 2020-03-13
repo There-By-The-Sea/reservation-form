@@ -10,7 +10,7 @@ class ReservationForm extends React.Component {
     super(props)
 
     this.state = {
-      property: 'PropertyObject_ GOES HERE'
+      property: this.props.property
     }
     this.setStringsToState = this.setStringsToState.bind(this);
   }
@@ -42,9 +42,9 @@ class ReservationForm extends React.Component {
   render() {
     return (
       <div className='ReservationForm'>
-        <ReservationHeader />
-        <ReservationDateSelector setStringsToState={this.setStringsToState} />
-        <GuestsSelector />
+        <ReservationHeader rating={this.props.property.avg_rating} price={this.props.property.price_per_night}/>
+        <ReservationDateSelector setStringsToState={this.setStringsToState} reservations={this.props.property.reservations} />
+        <GuestsSelector maxGuests={this.props.property.maxGuests}/>
         <ReserveButton />
       </div>
     )

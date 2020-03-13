@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SelectionDropDown from './SelectionDropDown.jsx';
 
 const GuestsSelector = (props) => {
@@ -13,6 +14,8 @@ const GuestsSelector = (props) => {
   )
 }
 
+
 export default GuestsSelector;
 
 //DISPLAY DROPDOWN WHEN CLICKED
+
