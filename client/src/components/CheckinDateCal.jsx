@@ -15,14 +15,15 @@ class CheckinDateCal extends React.Component {
     this.blockedDateChecker = this.blockedDateChecker.bind(this);
   }
 
-  componentDidMount() {
-
-  }
 
   componentDidUpdate() {
-    this.dateRangeFinder()
     if (this.state.startDate & this.state.endDate) {
       this.props.setStringsToState(this.state.startDate, this.state.endDate);
+    }
+    if (this.state.blockedDates === undefined) {
+      this.setState({
+        blockedDates: this.dateRangeFinder()
+      })
     }
   }
 
@@ -30,7 +31,16 @@ class CheckinDateCal extends React.Component {
     var year = day.year();
     var month = day.month();
     var date = day.date();
-    console.log(this.dateRangeFinder())
+    var isBlocked = false;
+    this.state.blockedDates.forEach(blockedDate => {
+      if (year === blockedDate.getFullYear() && month === blockedDate.getMonth() && date === blockedDate.getDate()) {
+        return true;
+      } 
+      console.log(year, blockedDate.getFullYear())
+      console.log(month, blockedDate.getMonth())
+      console.log(date, blockedDate.getDate())
+    })
+    return false;
   }
 
   //this function outputs an array of all the blocked dates in 
