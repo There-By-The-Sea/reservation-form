@@ -9,6 +9,7 @@ class CheckinDateCal extends React.Component {
     super(props)
 
     this.state = {
+      i: 0
     }
 
     this.dateRangeFinder = this.dateRangeFinder.bind(this);
@@ -26,21 +27,25 @@ class CheckinDateCal extends React.Component {
       })
     }
   }
-
+  
+  
   blockedDateChecker(day) {
-    var year = day.year();
-    var month = day.month();
-    var date = day.date();
-    var isBlocked = false;
-    this.state.blockedDates.forEach(blockedDate => {
-      if (year === blockedDate.getFullYear() && month === blockedDate.getMonth() && date === blockedDate.getDate()) {
-        return true;
-      } 
-      console.log(year, blockedDate.getFullYear())
-      console.log(month, blockedDate.getMonth())
-      console.log(date, blockedDate.getDate())
-    })
-    return false;
+    var i = 0
+    return (day) => {
+      var year = day.year();
+      var month = day.month();
+      var date = day.date();
+      var blockedDates = this.state.blockedDates
+      if (year == blockedDates[i].getFullYear()) {
+        if (month == blockedDates[i].getMonth()) {
+          if (date == blockedDates[i].getDate()) {
+            i++
+            return true;
+          }
+        }
+      }
+      return false;
+    }
   }
 
   //this function outputs an array of all the blocked dates in 
@@ -78,7 +83,7 @@ class CheckinDateCal extends React.Component {
           onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
           startDatePlaceholderText={'Check-in'}
           endDatePlaceholderText={'Check-out'}
-          isDayBlocked={this.blockedDateChecker}
+          isDayBlocked={this.blockedDateChecker()}
         />
       </div>
     )
