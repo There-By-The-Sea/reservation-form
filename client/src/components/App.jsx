@@ -3,8 +3,6 @@ import CalendarDateSelector from './CalendarDateSelector.jsx';
 import ReservationForm from './ReservationForm.jsx';
 
 
-
-
 class App extends React.Component {
   constructor(props) {
     super(props)

@@ -29,9 +29,10 @@ class CheckinDateCal extends React.Component {
   }
   
   
-  blockedDateChecker(day) {
+  blockedDateChecker() {
     var i = 0
     return (day) => {
+      console.log('hit from inner')
       var year = day.year();
       var month = day.month();
       var date = day.date();
@@ -70,6 +71,7 @@ class CheckinDateCal extends React.Component {
   }
 
   render() {
+    var i = 0;
     return (
       <div>
         <DateRangePicker
@@ -82,7 +84,7 @@ class CheckinDateCal extends React.Component {
           onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
           startDatePlaceholderText={'Check-in'}
           endDatePlaceholderText={'Check-out'}
-          isDayBlocked={this.blockedDateChecker()}
+          isDayBlocked={this.blockedDateChecker(i)}
         />
       </div>
     )
