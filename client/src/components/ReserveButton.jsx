@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const ReserveButton = (props) => {
   return (
     <div className="ReserveButtonContainer">
