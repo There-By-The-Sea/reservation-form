@@ -8,12 +8,7 @@ import ReserveButton from './ReserveButton.jsx';
 class ReservationForm extends React.Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      property: this.props.property
-    }
   }
-
 
   render() {
     return (

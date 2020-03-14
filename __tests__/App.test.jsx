@@ -36,4 +36,6 @@ describe('Unit Tests - App', () => {
     expect(wrapper.state('startDateString')).toBe('1996-6-4');
     expect(wrapper.state('endDateString')).toBe('1996-7-26');
   });
+
+  //need to add a test for the intial get request that happend when component mounts
 })

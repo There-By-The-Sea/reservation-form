@@ -32,7 +32,6 @@ class CheckinDateCal extends React.Component {
   blockedDateChecker() {
     var i = 0
     return (day) => {
-      console.log('hit from inner')
       var year = day.year();
       var month = day.month();
       var date = day.date();
@@ -52,22 +51,21 @@ class CheckinDateCal extends React.Component {
   //this function outputs an array of all the blocked dates in 
   dateRangeFinder() {
     var reservations = this.props.reservations.sort((b, a) => new Date(b.checkin) - new Date(a.checkin));
-      if (reservations !== undefined) {
-        var blockedDates = []; 
-        reservations.forEach(reservation => {
-          var diffTime = Math.abs(new Date(reservation.checkout) - new Date (reservation.checkin));
-          var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-          var i = 0;
-          var checkinDate = new Date(reservation.checkin);
-          blockedDates.push(new Date(checkinDate));
-          while (i < diffDays) {
-            var nextDate = checkinDate.setDate(checkinDate.getDate() + 1);
-            blockedDates.push(new Date(nextDate));
-            i++
-          }
-        })
-      return blockedDates;
-    }
+    console.log(reservations)
+      var blockedDates = []; 
+      reservations.forEach(reservation => {
+        var diffTime = Math.abs(new Date(reservation.checkout) - new Date (reservation.checkin));
+        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        var i = 0;
+        var checkinDate = new Date(reservation.checkin);
+        blockedDates.push(new Date(checkinDate));
+        while (i < diffDays) {
+          var nextDate = checkinDate.setDate(checkinDate.getDate() + 1);
+          blockedDates.push(new Date(nextDate));
+          i++
+        }
+      })
+    return blockedDates;
   }
 
   render() {
