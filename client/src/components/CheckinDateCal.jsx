@@ -51,7 +51,6 @@ class CheckinDateCal extends React.Component {
   //this function outputs an array of all the blocked dates in 
   dateRangeFinder() {
     var reservations = this.props.reservations.sort((b, a) => new Date(b.checkin) - new Date(a.checkin));
-    console.log(reservations)
       var blockedDates = []; 
       reservations.forEach(reservation => {
         var diffTime = Math.abs(new Date(reservation.checkout) - new Date (reservation.checkin));

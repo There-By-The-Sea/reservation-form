@@ -38,4 +38,5 @@ describe('Unit Tests - App', () => {
   });
 
   //need to add a test for the intial get request that happend when component mounts
+  //need to add a test that will test the functionality of the reserveButton when it is clicked
 })
