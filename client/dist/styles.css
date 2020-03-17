@@ -27,14 +27,16 @@ body {
   padding-bottom: 10px;
 }
 
+.CheckinDateCalBorder {
+  border: rgb(228, 228, 228) solid 1px;
+}
+
 .GuestsSelector {
   height: 64px;
   padding-top: 7px;
-  padding-bottom: 7px;
 }
 
 .checkinandout {
-  border: rgb(228, 228, 228) solid 1px;
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -43,10 +45,12 @@ body {
 
 .guestbutton {
   border: rgb(228, 228, 228) solid 1px;
-  height: 22px;
+  height: 36px;
   display: flex;
   flex-direction: row;
-  padding: 8px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 .ReserveButtonContainer {
   padding-top: 10px;
@@ -65,6 +69,89 @@ body {
   border-radius: 4px;
 }
 
+.selctionDropDown {
+  position: absolute;
+  width: 294px;
+  height: 300px;
+  background-color: white;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px;
+  border: rgb(228, 228, 228) solid 1px;
+  border-top: rgb(0, 132, 137) solid 2px;
+}
+
+.ageRange {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+.ageRangeDescription {
+  display: flex;
+  flex-direction: column;
+  width: 174px;
+  justify-content: left;
+}
+
+.plusContainer {
+  width: 50px;
+  height: 30px;
+}
+
+.plus {
+  border: rgb(0, 132, 137) solid 1px; 
+  color: rgb(0, 132, 137);
+  justify-content: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.minusContainer {
+  width: 50px;
+  height: 30px;
+}
+
+.minus {
+  border: rgb(0, 132, 137) solid 1px; 
+  color: rgb(0, 132, 137);
+  justify-content: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.guestNumber {
+  width: 15px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.guestCategory {
+  font-weight: 900;
+  width: 174px;
+}
+
+.guestCategoryDescription {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+
 #price {
   font-size: 22px;
   font-weight: 1000;
@@ -81,13 +168,6 @@ body {
   color: rgb(118, 118, 118);
 }
 
-/* #checkinandout {
-  font-size: 16px;
-  font-weight: 400;
-  color: rgb(118, 118, 118);
-  width: 150px;
-} */
-
 #arrow {
   width: 24px;
 }
@@ -96,6 +176,7 @@ body {
   font-size: 17px;
   color: rgb(118, 118, 118);
   width: 276px;
+  margin-top: 4px;
 }
 
 #downarrow {
@@ -122,5 +203,24 @@ body {
   width: 10px;
   height: 10px;
   font-size: 10px;
-  color: rgb(0, 132, 137)
+  color: rgb(0, 132, 137);
+}
+
+#totalGuests {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+#close {
+  padding: 8px;
+  width: 278px;
+  font-size: 16px;
+  color: rgb(0, 132, 137);
+  text-align: right;
+  font-weight: 900;
+}
+
+#adults {
+  margin-top: 12px;
 }

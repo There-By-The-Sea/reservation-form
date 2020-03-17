@@ -15,7 +15,8 @@ class ReservationForm extends React.Component {
       <div className='ReservationForm'>
         <ReservationHeader rating={this.props.property.avg_rating} price={this.props.property.price_per_night}/>
         <ReservationDateSelector setStringsToState={this.props.setStringsToState} reservations={this.props.property.reservations} />
-        <GuestsSelector maxGuests={this.props.property.maxGuests}/>
+        {/* <PaymentCalculator price={this.props.property.price_per_night} fee={this.props.property.service_fee}/> */}
+        <GuestsSelector maxGuests={this.props.property.max_guest}/>
         <ReserveButton handleReserveSubmit={this.props.handleReserveSubmit} />
       </div>
     )

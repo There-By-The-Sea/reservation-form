@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getProperty(67)
+    this.getProperty(45)
   }
 
   getProperty(propertyId) {
@@ -89,7 +89,6 @@ class App extends React.Component {
     return (
       <div>
         <h1>APP</h1>
-        {/* <CalendarDateSelector /> */}
         <ReservationForm property={this.state.propertyInfo} setStringsToState={this.setStringsToState} handleReserveSubmit={this.handleReserveSubmit}/>
       </div>
     )

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1584228119673" clover="3.2.0">
-  <project timestamp="1584228119673" name="All files">
-    <metrics statements="82" coveredstatements="63" conditionals="20" coveredconditionals="10" methods="33" coveredmethods="19" elements="135" coveredelements="92" complexity="0" loc="82" ncloc="82" packages="1" files="9" classes="9"/>
+<coverage generated="1584387166807" clover="3.2.0">
+  <project timestamp="1584387166807" name="All files">
+    <metrics statements="82" coveredstatements="66" conditionals="20" coveredconditionals="10" methods="33" coveredmethods="22" elements="135" coveredelements="98" complexity="0" loc="82" ncloc="82" packages="1" files="9" classes="9"/>
     <file name="App.jsx" path="/Users/trevorbell/Desktop/reservation-form/client/src/components/App.jsx">
       <metrics statements="31" coveredstatements="17" conditionals="10" coveredconditionals="2" methods="15" coveredmethods="6"/>
       <line num="7" count="4" type="stmt"/>
@@ -77,14 +77,14 @@
       <line num="81" count="0" type="stmt"/>
     </file>
     <file name="GuestsSelector.jsx" path="/Users/trevorbell/Desktop/reservation-form/client/src/components/GuestsSelector.jsx">
-      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <line num="5" count="2" type="stmt"/>
-      <line num="6" count="0" type="stmt"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
     </file>
     <file name="PaymentCalculator.jsx" path="/Users/trevorbell/Desktop/reservation-form/client/src/components/PaymentCalculator.jsx">
-      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="5" count="0" type="stmt"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
     </file>
     <file name="ReservationDateSelector.jsx" path="/Users/trevorbell/Desktop/reservation-form/client/src/components/ReservationDateSelector.jsx">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -107,9 +107,9 @@
       <line num="4" count="2" type="stmt"/>
     </file>
     <file name="SelectionDropDown.jsx" path="/Users/trevorbell/Desktop/reservation-form/client/src/components/SelectionDropDown.jsx">
-      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="5" count="0" type="stmt"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="4" count="4" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

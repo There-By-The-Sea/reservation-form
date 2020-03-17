@@ -5,7 +5,7 @@ const ReservationDateSelector = (props) => {
   return (
     <div className='ReservationDateSelector'>
       <span id='text'>Dates</span>
-        <div>
+        <div className='CheckinDateCalBorder'>
           <CheckinDateCal setStringsToState={props.setStringsToState} reservations={props.reservations} />
         </div>
     </div>
