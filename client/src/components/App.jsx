@@ -7,7 +7,10 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      propertyInfo: {}
+      propertyInfo: {},
+      startDateString: undefined,
+      endDateString: undefined,
+      nights: 0
     }
     this.getProperty = this.getProperty.bind(this);
     this.setStringsToState = this.setStringsToState.bind(this);
@@ -15,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getProperty(45)
+    this.getProperty(43)
   }
 
   getProperty(propertyId) {
@@ -42,12 +45,14 @@ class App extends React.Component {
   }
 
   setStringsToState(startDate, endDate) {
+    var nights =(endDate - startDate)/ 86400000;
     var startDateString = this.createStringDate(startDate.year(), startDate.month() + 1, startDate.date());
     var endDateString = this.createStringDate(endDate.year(), endDate.month() + 1, endDate.date());
     if(startDateString !== this.state.startDateString || endDateString !== this.state.endDateString) {
       this.setState({
         startDateString,
-        endDateString
+        endDateString,
+        nights
       })
     }
   }
@@ -88,8 +93,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>APP</h1>
-        <ReservationForm property={this.state.propertyInfo} setStringsToState={this.setStringsToState} handleReserveSubmit={this.handleReserveSubmit}/>
+        <ReservationForm 
+          property={this.state.propertyInfo} 
+          setStringsToState={this.setStringsToState} 
+          handleReserveSubmit={this.handleReserveSubmit}
+          startDateString={this.state.startDateString}
+          endDateString={this.state.endDateString}
+          nights={this.state.nights}
+        />
       </div>
     )
   }
