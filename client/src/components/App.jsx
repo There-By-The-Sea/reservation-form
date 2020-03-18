@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getProperty(43)
+    this.getProperty(41)
   }
 
   getProperty(propertyId) {

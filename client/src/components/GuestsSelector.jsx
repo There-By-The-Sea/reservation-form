@@ -6,8 +6,8 @@ class GuestsSelector extends React.Component {
     super(props)
 
     this.state = {
-      adults: 1,
-      children: 3,
+      adults: 2,
+      children: 0,
       infants: 0,
       displayDropDown: false
     }
