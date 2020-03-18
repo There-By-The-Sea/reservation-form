@@ -131,6 +131,31 @@ body {
   font-weight: 900;
 }
 
+.lightMinus {
+  border:  rgb(195, 217, 219) solid 1px; 
+  color: rgb(195, 217, 219);
+  justify-content: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.lightPlus {
+  border:  rgb(195, 217, 219) solid 1px; 
+  color: rgb(195, 217, 219);
+  justify-content: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+}
+
 .guestNumber {
   width: 15px;
   height: 40px;
