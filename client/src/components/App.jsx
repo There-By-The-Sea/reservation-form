@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   getProperty(propertyId) {
-    fetch(`http://localhost:3000/reservations/plan?propertyId=${propertyId}`)
+    fetch(`http://localhost:3001/reservations/plan?propertyId=${propertyId}`)
       .then(response => {
         return response.json();
       })
@@ -71,7 +71,7 @@ class App extends React.Component {
           property_id: this.state.propertyInfo.id
         })
       }
-      fetch(`http://localhost:3000/reservations/book`, options)
+      fetch(`http://localhost:3001/reservations/book`, options)
         .then(response => {
           return response.json();
         })
