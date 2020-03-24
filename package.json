@@ -4,6 +4,7 @@
   "description": "reservation form for there by the sea",
   "main": "index.js",
   "scripts": {
+    "start": "server/index.js",
     "webpack": "webpack -d --watch",
     "schema": "mysql -u root < schema.sql",
     "server": "nodemon server/index.js",
