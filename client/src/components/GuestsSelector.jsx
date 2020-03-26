@@ -19,7 +19,6 @@ class GuestsSelector extends React.Component {
   handleIncrement(event) {
     var age = event.target.id;
     var currentNumberPlusOne = this.state[age] + 1
-    console.log(currentNumberPlusOne);
     this.setState({
       [age]: currentNumberPlusOne
     })
@@ -28,14 +27,12 @@ class GuestsSelector extends React.Component {
   handleDecrement(event) {
     var age = event.target.id;
     var currentNumberPlusOne = this.state[age] - 1
-    console.log(currentNumberPlusOne);
     this.setState({
       [age]: currentNumberPlusOne
     })
   }
 
   displayDropDown() {
-    console.log('clicked')
     this.setState({
       displayDropDown: !this.state.displayDropDown
     })

@@ -14,7 +14,6 @@ class SelectionDropDown extends React.Component {
     var plusAdults = 'plus'
     if (this.props.adults + this.props.children >= this.props.maxGuests) {
       plusAdults = 'lightPlus';
-      console.log('HIT HIT HIT')
     }
     var minusAdults = 'minus'
     if (this.props.adults < 2) {

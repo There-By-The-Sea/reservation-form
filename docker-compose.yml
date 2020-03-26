@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  reservation-form:
+    build: .
+    depends_on:
+      - 'database'
+    ports: 
+      - '3001:3001'
+
+  database:
+    image: mysql:5.7
+    environment:
+      MySQL_USER: 'root'
+      MYSQL_ROOT_PASSWORD: ${DB_PW}
+      MYSQL_DATABASE: 'reservation_db'
+      
+
