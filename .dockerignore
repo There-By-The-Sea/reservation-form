@@ -2,3 +2,10 @@ node_modules
 npm-debug.log
 .git
 .gitignore
+__mocks__
+__tests__
+jest.config.js
+babel.config.js
+coverage
+db/schema.sql
+.env
