@@ -7,12 +7,19 @@ services:
       - 'database'
     ports: 
       - '3001:3001'
-
+  
   database:
-    image: mysql:5.7
-    environment:
-      MySQL_USER: 'root'
-      MYSQL_ROOT_PASSWORD: ${DB_PW}
-      MYSQL_DATABASE: 'reservation_db'
+    build: ./db
+    ports:
+      - '3306:3306'
+
+  # database:
+  #   image: mysql:5.7
+  #   environment:
+  #     MySQL_USER: 'root'
+  #     MYSQL_ROOT_PASSWORD: ${DB_PW}
+  #     MYSQL_DATABASE: 'reservation_db'
+  #   volumes:
+  #     - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
       
 

@@ -10,4 +10,10 @@ RUN npm install
 
 EXPOSE 3001
 
+# RUN echo 'before sleep -------------'
+
+# RUN sleep 30
+
+# RUN echo 'after sleep ----------------'
+
 CMD [ "npm", "start" ]
