@@ -27,6 +27,7 @@ class App extends React.Component {
         return response.json();
       })
       .then(propertyData => {
+        console.log(propertyData.property[0])
         this.setState({
           propertyInfo: propertyData.property[0]
         })

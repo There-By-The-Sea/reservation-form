@@ -1,8 +1,6 @@
 const mysql = require('mysql');
 const config = require('./config.js');
 
-console.log(config);
-
 const connection = mysql.createConnection(config);
 
 connection.connect(function(err) {

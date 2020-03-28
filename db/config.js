@@ -2,9 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   host: 'database',
-  user: 'root',
+  user: process.env.DB_USER,
   password: process.env.DB_PW,
-  database: 'reservation_db'
+  database: process.env.DB_DB
 }
 
 //THIS WORKS TO CONNECT TO DB ON LOCALHOST
