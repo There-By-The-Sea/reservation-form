@@ -58,7 +58,7 @@ Notice that the dates selected from early are no longer available after 'Reserve
 
 ## Deployment
 
-I deployed this project using Docker and AWS.  The Dockerfiles and docker-compose files are included in this repository.  The database was deployed and populated with 100 records on an EC2 instance. This image below is a representation of a proxy server that served the reservation-form microservice as well as other microservices from project members to create a replica of a property page on airbnb 
+I deployed this project using Docker and AWS.  The Dockerfiles and docker-compose files are included in this repository.  The database was deployed and populated with 100 records on an EC2 instance. This image below is a representation of a proxy server that served the reservation-form microservice as well as other microservices from project members to create a replica of a property page on airbnb.
 
 ![Proxy Server Demo](Demo/reservation-proxy.gif)
 
