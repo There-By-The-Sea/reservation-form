@@ -42,11 +42,17 @@ This will populate the database with 100 fake property records, and each propert
 
 ## App Features
 
-#### Select Dates
+#### Select Dates & View Price
 
-#### View Price
+![Select Dates Gif](Demo/select-dates.gif)
+
+#### Select Guest Amount
+
+![Guests Gif](Demo/guests.gif)
 
 #### Reserve Dates
+
+![Reserve Gif](Demo/reserve.gif)
 
 ## Deployment
 
