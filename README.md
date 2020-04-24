@@ -52,6 +52,8 @@ This will populate the database with 100 fake property records, and each propert
 
 #### Reserve Dates
 
+Notice that the dates selected from early are no longer available after 'Reserve' button is clicked.
+
 ![Reserve Gif](Demo/reserve.gif)
 
 ## Deployment
