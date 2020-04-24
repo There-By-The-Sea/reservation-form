@@ -214,6 +214,15 @@ body {
   margin-top: 8px;
 }
 
+.guestNumberAdults {
+  width: 15px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 18px;
+}
+
 .guestCategory {
   font-weight: 900;
   width: 174px;
@@ -263,6 +272,7 @@ body {
   font-weight: 1000;
   text-align: center;
   align-content: center;
+  padding: 5px;
 }
 
 #buttonmessage {
@@ -297,4 +307,38 @@ body {
 
 #adults {
   margin-top: 12px;
+}
+
+#adultsWord {
+  margin-top: 18px;
+}
+
+.guestbutton:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 1px rgb(118, 118, 118);
+}
+
+.ReserveButton:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.plus:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.minus:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+#close:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.CheckinDateCalBorder:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 1px rgb(118, 118, 118);
 }
