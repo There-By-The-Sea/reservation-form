@@ -38,11 +38,11 @@ class SelectionDropDown extends React.Component {
     return (
       <div className='selctionDropDown'>
         <div className='ageRange'>
-          <div className='ageRangeDescription' className='guestCategory' id='adults'>Adults</div>
+          <div className='ageRangeDescription' className='guestCategory' id='adultsWord'>Adults</div>
           <div className='minusContainer' onClick={this.props.handleDecrement}>
             <div className={minusAdults} id='adults'>-</div>
           </div>
-            <div className='guestNumber'>{this.props.adults}</div>
+            <div className='guestNumberAdults'>{this.props.adults}</div>
           <div className='plusContainer' onClick={this.props.handleIncrement}>
             <div className={plusAdults} id='adults'>+</div>
           </div>
